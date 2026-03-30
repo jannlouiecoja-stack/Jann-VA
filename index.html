@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jann Louie V. Coja - Virtual Assistant Portfolio">
+  
+  <meta property="og:title" content="Jann Louie V. Coja | Virtual Assistant">
+  <meta property="og:description" content="Process Over Chaos. Data Entry, Executive Assistant, and Non-Voice Support specializing in high-volume management.">
+  <meta property="og:image" content="https://i.postimg.cc/FHrKkpc9/profile.png">
+  <meta property="og:type" content="website">
+
+  <title>Jann Louie V. Coja | Virtual Assistant</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <style>
+    :root {
+      --bg-main: #fcf9f5;      
+      --bg-surface: #ffffff;   
+      --text-main: #2d3748;    
+      --text-muted: #718096;   
+      --accent: #bcccf5;       
+      --accent-dark: #295485; 
+      --accent-glow: rgba(188, 204, 245, 0.4);
+      --highlight: rgba(188, 204, 245, 0.3); 
+    }
+
+    body { margin: 0; padding: 0; scroll-behavior: smooth; font-family: 'Inter', sans-serif; background-color: var(--bg-main); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+    
+    .font-display { font-family: 'Playfair Display', serif; }
+
+    *:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 2px; }
+
+    a, button, .support-card, .portfolio-item, #footer-profile, .skill-btn, .legend-item, details summary {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    #progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; background: rgba(0,0,0,0.05); z-index: 2100; pointer-events: none; }
+    #progress-bar { height: 100%; width: 0%; background: var(--accent-dark); box-shadow: 0 0 10px var(--accent-glow); transition: width 0.1s ease-out; }
+
+    .pattern-bg { background-image: radial-gradient(circle at 1px 1px, rgba(188, 204, 245, 0.4) 1px, transparent 0); background-size: 40px 40px; }
+
+    #hero { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 0; pointer-events: none; }
+    #hero .relative { pointer-events: auto; }
+    #about { margin-top: 100vh; overflow: hidden; }
+    #about, #services, #portfolio, #workflow, #contact { position: relative; box-shadow: 0 -20px 40px rgba(0,0,0,0.05); }
+
+    .ghost-emoji { 
+      position: absolute; font-size: 15rem; opacity: 0; pointer-events: none; z-index: 0; 
+      animation: ghostFloat 30s linear infinite; filter: blur(4px); user-select: none; will-change: transform, opacity;
+    }
+    @keyframes ghostFloat { 
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 
+      10% { opacity: 0.05; } 
+      90% { opacity: 0.05; } 
+      100% { transform: translateY(-150vh) rotate(20deg); opacity: 0; } 
+    }
+    @keyframes wideFloat { 
+      0%, 100% { transform: translateY(0) rotate(0deg); } 
+      50% { transform: translateY(-40px) rotate(10deg); } 
+    }
+    @keyframes pulseGlow { 
+      0%, 100% { box-shadow: 0 0 15px rgba(252,211,77,0.3); border-color: rgba(252,211,77,0.5); } 
+      50% { box-shadow: 0 0 35px rgba(252,211,77,0.8); border-color: rgba(252,211,77,1); } 
+    }
+
+    .shimmer-text {
+      background: linear-gradient(to right, var(--text-main) 20%, #295485 40%, #295485 60%, var(--text-main) 80%);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    @keyframes shimmer { to { background-position: 200% center; } }
+
+    @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    @keyframes drawHighlight { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+    
+    @keyframes slideDownFade { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    details > summary { list-style: none; outline: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-content { animation: slideDownFade 0.4s ease-out forwards; }
+
+    .magic-highlight { background-image: linear-gradient(var(--highlight), var(--highlight)); background-repeat: no-repeat; background-size: 0% 100%; background-position: left center; padding: 0 4px; border-radius: 4px; color: var(--text-main); font-weight: 600; }
+    .magic-highlight.visible { animation: drawHighlight 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+
+    .marquee-container { width: 100%; overflow: hidden; background: var(--accent-dark); color: var(--bg-main); padding: 15px 0; border-top: 2px solid rgba(255,255,255,0.1); border-bottom: 2px solid rgba(255,255,255,0.1); display: flex; white-space: nowrap; position: relative; z-index: 20; }
+    .marquee-content { display: flex; animation: scrollMarquee 20s linear infinite; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; will-change: transform; }
+    .marquee-item { padding: 0 30px; display: flex; align-items: center; gap: 30px; }
+    .marquee-star { color: #fcd34d; }
+
+    .hero-element { animation: fadeSlideUp 1s ease-out forwards; opacity: 0; will-change: transform, opacity; }
+    .hero-delay-1 { animation-delay: 0.2s; }
+    .hero-delay-2 { animation-delay: 0.4s; }
+    
+    .slide-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.8s ease, transform 0.8s ease; will-change: transform, opacity; }
+    .slide-right { opacity: 0; transform: translateX(60px); transition: opacity 0.8s ease, transform 0.8s ease; will-change: transform, opacity; }
+    .slide-up { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; will-change: transform, opacity; }
+    .slide-left.visible, .slide-right.visible, .slide-up.visible { opacity: 1; transform: translate(0); }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+
+    .service-card { 
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+      z-index: 10; 
+      position: relative; 
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(188, 204, 245, 0.2), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+      pointer-events: none;
+      border-radius: inherit;
+    }
+    .service-card > * {
+      position: relative;
+      z-index: 10;
+    }
+
+    .skill-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; cursor: pointer; }
+    .skill-panel-enter { opacity: 1 !important; transform: translateY(0) !important; }
+
+    .portfolio-item { position: relative; overflow: hidden; z-index: 10; border: 1px solid rgba(0,0,0,0.05); display: block; width: 100%; text-align: left; cursor: pointer; }
+    .portfolio-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 1) 100%); padding: 2rem 1.5rem; transform: translateY(100%); transition: transform 0.4s ease; }
+    .portfolio-item img { transition: transform 0.5s ease; }
+    
+    .support-card { position: relative; border-radius: 1rem; background: white; padding: 1.5rem 1rem; border: 1px solid #f3f4f6; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); text-decoration: none; z-index: 10; overflow: hidden; width: 100%; cursor: pointer; }
+    .cheeky-text { max-height: 0; opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; color: var(--accent-dark); font-weight: 700; font-size: 0.85rem; width: 100%; border-top: 1px solid transparent; }
+
+    .nav-link { position: relative; display: inline-block; padding-bottom: 2px; transition: color 0.3s; background: none; border: none; font: inherit; color: inherit; cursor: pointer; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: white; transition: width 0.3s ease; }
+
+    .btn-bubble-container { position: relative; overflow: visible; cursor: pointer; }
+    .bubble-top, .bubble-bottom {
+        position: absolute; background: white; border-radius: 12px; padding: 6px 14px;
+        font-size: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.15); opacity: 0;
+        pointer-events: none; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 20; border: 1px solid rgba(0,0,0,0.05);
+    }
+    .bubble-top { top: -10px; left: 50%; transform: translateX(-50%) translateY(10px) scale(0.8); }
+    .bubble-bottom { bottom: -10px; left: 50%; transform: translateX(-50%) translateY(-10px) scale(0.8); }
+    .bubble-top::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); border-width: 6px 6px 0; border-style: solid; border-color: white transparent transparent transparent; }
+    .bubble-bottom::after { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); border-width: 0 6px 6px; border-style: solid; border-color: transparent transparent white transparent; }
+
+    .photo-container { position: relative; display: inline-block; }
+    
+    .airpods-pill {
+        position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%) translateY(20px);
+        background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border-radius: 50px; padding: 8px 16px; display: flex; align-items: center; gap: 8px;
+        opacity: 0; pointer-events: none; z-index: 30; transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .photo-container:hover .airpods-pill, .photo-container:active .airpods-pill { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .orbit-bubble {
+        position: absolute; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        opacity: 0; pointer-events: none; z-index: 25; transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .ob-1 { top: -10px; left: -10px; width: 45px; height: 45px; font-size: 1.2rem; transform: scale(0.5) translate(20px, 20px); }
+    .ob-2 { top: 20px; right: -15px; width: 55px; height: 55px; font-size: 1.5rem; transform: scale(0.5) translate(-20px, 20px); transition-delay: 0.05s; }
+    .ob-3 { top: -5px; right: 20px; width: 35px; height: 35px; font-size: 1rem; transform: scale(0.5) translate(0, 20px); transition-delay: 0.1s; }
+    
+    .photo-container:hover .orbit-bubble, .photo-container:active .orbit-bubble { opacity: 1; }
+    .photo-container:hover .ob-1, .photo-container:active .ob-1 { transform: scale(1) translate(0, 0); animation: floatAnimation 3s ease-in-out infinite alternate 0.5s; }
+    .photo-container:hover .ob-2, .photo-container:active .ob-2 { transform: scale(1) translate(0, 0); animation: floatAnimation 4s ease-in-out infinite 0.6s; }
+    .photo-container:hover .ob-3, .photo-container:active .ob-3 { transform: scale(1) translate(0, 0); animation: floatAnimation 2.5s ease-in-out infinite alternate 0.7s; }
+
+    .fountain-container { position: absolute; inset: 0; z-index: 5; pointer-events: none; overflow: hidden; border-radius: 2rem; }
+    .fountain-emoji { position: absolute; bottom: -20px; opacity: 0; font-size: 1.5rem; filter: blur(0.5px); }
+    
+    @keyframes fountainUp {
+        0% { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 0; }
+        20% { opacity: 0.6; }
+        80% { opacity: 0.6; }
+        100% { transform: translateY(-300px) scale(1.2) rotate(20deg); opacity: 0; }
+    }
+    
+    .photo-container:hover .e1, .photo-container:active .e1 { animation: fountainUp 2.5s ease-in infinite 0.1s; left: 15%; }
+    .photo-container:hover .e2, .photo-container:active .e2 { animation: fountainUp 3s ease-in infinite 0.6s; left: 45%; font-size: 2rem; filter: blur(1px); }
+    .photo-container:hover .e3, .photo-container:active .e3 { animation: fountainUp 2.8s ease-in infinite 0.3s; left: 75%; font-size: 1.2rem; }
+    .photo-container:hover .e4, .photo-container:active .e4 { animation: fountainUp 3.2s ease-in infinite 0.8s; left: 30%; }
+
+    @keyframes notificationPop {
+      0% { transform: scale(0.5); opacity: 0; }
+      80% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .ios-badge { display: none; }
+
+    @media (hover: hover) and (pointer: fine) {
+      body, button, a, .cursor-pointer, details summary, .support-card, .portfolio-item, .skill-btn, .legend-item { 
+        cursor: none !important; 
+      }
+      p, h1, h2, h3, h4, h5, span { 
+        cursor: text; 
+      }
+
+      .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate(-50%, -50%); will-change: transform, width, height, background-color; }
+      .cursor-dot { width: 8px; height: 8px; background-color: #fcd34d; transition: opacity 0.2s ease; box-shadow: 0 0 10px rgba(252,211,77,0.5); }
+      .cursor-ring { width: 32px; height: 32px; border: 2px solid #fcd34d; background-color: transparent; transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, border-color 0.3s ease; }
+      .cursor-ring.active { width: 60px; height: 60px; background-color: rgba(252,211,77, 0.2); border-color: transparent; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
+      .cursor-ring.click-pulse {
+        width: 20px !important;
+        height: 20px !important;
+        background-color: #fcd34d !important;
+        border-color: transparent !important;
+        opacity: 0.8;
+        transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease !important;
+      }
+
+      .btn-hover:hover { transform: scale(1.05); box-shadow: 0 10px 30px 5px var(--accent-glow); }
+      .btn-bubble-container:hover .bubble-top { opacity: 1; transform: translateX(-50%) translateY(-100%) scale(1); }
+      .btn-bubble-container:hover .bubble-bottom { opacity: 1; transform: translateX(-50%) translateY(100%) scale(1); }
+      
+      .service-card:hover { transform: translateY(-4px) scale(1.01); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5), 0 20px 40px -10px var(--accent-glow); }
+      .service-card:hover::before { opacity: 1; }
+      .service-card:hover .ios-badge { display: block; animation: notificationPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+      .skill-btn:hover { transform: translateY(-3px); border-color: var(--accent-dark); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+      .portfolio-item:hover .portfolio-overlay { transform: translateY(0); }
+      .portfolio-item:hover img { transform: scale(1.1); }
+      .support-card:hover { transform: translateY(-8px); background: linear-gradient(135deg, #ffffff 0%, #e6edff 100%); box-shadow: 0 20px 40px -10px var(--accent-glow); border-color: var(--accent); }
+      .support-card:hover .cheeky-text { max-height: 50px; opacity: 1; margin-top: 12px; padding-top: 12px; border-color: rgba(188, 204, 245, 0.4); }
+      .nav-link:hover { color: white; }
+      .nav-link:hover::after { width: 100%; }
+      .legend-item:hover { border-color: var(--accent-dark); transform: scale(1.02); background: rgba(255,255,255,0.8); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-overlay { transform: translateY(0); padding: 1.5rem 1rem; }
+      .portfolio-item img { transform: scale(1.05); } 
+    }
+
+    .btn-hover:active { transform: scale(0.96) !important; transition: transform 0.1s !important; }
+    .btn-bubble-container:active .bubble-top { opacity: 1; transform: translateX(-50%) translateY(-100%) scale(1); transition: all 0.1s;}
+    .btn-bubble-container:active .bubble-bottom { opacity: 1; transform: translateX(-50%) translateY(100%) scale(1); transition: all 0.1s;}
+    .service-card:active .ios-badge { display: block; animation: notificationPop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+    .skill-btn:active { transform: scale(0.96) translateY(0); box-shadow: none; transition: transform 0.1s; }
+    .support-card:active { transform: scale(0.96) translateY(-4px) !important; background: linear-gradient(135deg, #ffffff 0%, #e6edff 100%); box-shadow: 0 10px 20px -5px var(--accent-glow); border-color: var(--accent); transition: all 0.1s !important; }
+    .support-card:active .cheeky-text { max-height: 50px; opacity: 1; margin-top: 12px; padding-top: 12px; border-color: rgba(188, 204, 245, 0.4); transition: all 0.1s !important; }
+    .nav-link:active { opacity: 0.7; }
+    .portfolio-item:active { transform: scale(0.98); transition: transform 0.1s; }
+
+    #backToTop { position: fixed; bottom: 30px; right: 30px; background: var(--accent); color: var(--text-main); width: 55px; height: 55px; border-radius: 50%; border: none; box-shadow: 0 10px 25px var(--accent-glow); display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
+    #backToTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    @media (hover: hover) { #backToTop:hover { transform: translateY(-5px); background: var(--accent-dark); color: white; box-shadow: 0 15px 30px rgba(41, 84, 133, 0.5); } }
+
+    #toast { visibility: hidden; min-width: 250px; background: rgba(20, 20, 20, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); color: #fff; text-align: center; border-radius: 50px; padding: 16px 24px; position: fixed; z-index: 3000; left: 50%; top: 20px; transform: translateX(-50%) translateY(-20px) scale(0.9); opacity: 0; font-weight: 600; box-shadow: 0 15px 40px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    #toast.show { visibility: visible; transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
+
+    .modal-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 250, 245, 0.4); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: all 0.4s ease; }
+    .modal-backdrop.show { opacity: 1; visibility: visible; pointer-events: auto; }
+    .modal-content { background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(255, 255, 255, 0.5); width: 95%; max-width: 1200px; max-height: 90vh; border-radius: 20px; overflow-y: auto; position: relative; animation: modalFadeIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .modal-close { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.05); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; color: var(--text-main); display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 100; cursor: pointer; }
+    @media (hover: hover) { .modal-close:hover { background: var(--accent-dark); color: white; transform: rotate(90deg); } }
+
+    #fullscreen-lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(15px); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease; }
+    #fullscreen-lightbox.show { opacity: 1; visibility: visible; pointer-events: auto; }
+    #fullscreen-lightbox img { max-width: 95vw; max-height: 80vh; object-fit: contain; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.3s ease; }
+    #fullscreen-lightbox.show img { transform: scale(1); }
+    .lightbox-close { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; width: 50px; height: 50px; color: white; font-size: 28px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 2020; pointer-events: auto; cursor: pointer; }
+    .lightbox-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%); color: white; padding: 60px 30px 40px; text-align: center; font-size: 15px; line-height: 1.6; z-index: 2015; pointer-events: none; max-width: 800px; margin: 0 auto; }
+
+    .lightbox-nav, .gallery-nav { border: none; outline: none; }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border-radius: 50%; width: 60px; height: 60px; color: white; font-size: 30px; display: flex; align-items: center; justify-content: center; z-index: 2020; transition: all 0.2s; pointer-events: auto; cursor: pointer; }
+    @media (hover: hover) { .lightbox-nav:hover { background: rgba(255,255,255,0.4); scale: 1.1; } }
+    #lb-prev { left: 30px; }
+    #lb-next { right: 30px; }
+
+    .gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.7); border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); z-index: 30; transition: 0.3s; color: var(--text-main); backdrop-filter: blur(5px); cursor: pointer; }
+    @media (hover: hover) { .gallery-nav:hover { background: var(--accent); color: var(--text-main); scale: 1.15; box-shadow: 0 6px 20px var(--accent-glow); } }
+
+    .inbox-scroll-panel::-webkit-scrollbar { width: 6px; }
+    .inbox-scroll-panel::-webkit-scrollbar-track { background: transparent; }
+    .inbox-scroll-panel::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
+    .inbox-scroll-panel::-webkit-scrollbar-thumb:hover { background: var(--accent-dark); }
+
+    .legend-item { transition: all 0.3s ease; border: 1px solid transparent; background: rgba(255,255,255,0.4); backdrop-filter: blur(10px); width: 100%; text-align: left; cursor: pointer; }
+    @media (hover: hover) { .legend-item:hover { border-color: var(--accent-dark); transform: scale(1.02); background: rgba(255,255,255,0.8); box-shadow: 0 4px 12px rgba(0,0,0,0.05); } }
+    
+    #inbox-slide-img, .calendar-zoom-img, #data-slide-img { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    @media (hover: hover) { #inbox-slide-img:hover, .calendar-zoom-img:hover, #data-slide-img:hover { transform: scale(1.04); } }
+    
+    .float-slow { animation: floatAnimation 5s ease-in-out infinite; will-change: transform; }
+    .float-medium { animation: floatAnimation 4s ease-in-out infinite reverse; will-change: transform; }
+    .float-fast { animation: floatAnimation 3.5s ease-in-out infinite; will-change: transform; }
+
+    /* STACKING CARDS CSS FIX - Dynamic Top */
+    .stack-container { position: relative; padding-bottom: 5vh; }
+    .stack-card { position: sticky; top: var(--stick-top, 15vh); will-change: transform, filter; transform-origin: top center; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease; margin-bottom: min(40vh, 400px); }
+    .stack-card.stacked-under { transform: scale(0.95) translateY(-20px); filter: brightness(0.6); }
+
+    .glass-nav { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .nav-link-custom { position: relative; display: inline-block; padding-bottom: 2px; }
+    .nav-link-custom::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: var(--text-main); transition: width 0.3s ease; }
+    .nav-link-custom:hover::after { width: 100%; }
+    .reveal-wrap { overflow: hidden; display: inline-flex; vertical-align: top; padding-bottom: 4px; }
+    .reveal-text { transform: translateY(110%); will-change: transform; animation: textReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    @keyframes textReveal { 0% { transform: translateY(110%); } 100% { transform: translateY(0); } }
+    .delay-reveal-1 { animation-delay: 0.1s; }
+    .delay-reveal-2 { animation-delay: 0.25s; }
+    .delay-reveal-3 { animation-delay: 0.4s; }
+
+    @keyframes slotMachine {
+      0%, 15% { transform: translateY(0); }
+      25%, 40% { transform: translateY(-20%); }
+      50%, 65% { transform: translateY(-40%); }
+      75%, 90% { transform: translateY(-60%); }
+      100% { transform: translateY(-80%); }
+    }
+    .animate-slot-machine {
+      animation: slotMachine 8s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+      will-change: transform;
+    }
+  </style>
+ </head>
+ <body class="bg-[var(--bg-main)] text-[var(--text-main)]" ontouchstart="">
+
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 glass-nav rounded-full px-6 py-3 flex justify-between items-center border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.05)]">
+    
+    <div class="group relative flex items-center py-1 cursor-pointer" tabindex="0" data-scroll-target="top">
+      <span class="font-display text-2xl font-bold text-[var(--text-main)] group-hover:text-[#fcd34d] transition-colors duration-300 z-10 shrink-0">JC.</span>
+
+      <div class="absolute top-[calc(100%+15px)] left-0 w-max bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] border border-gray-100/50 opacity-0 -translate-y-3 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[100]">
+        <div class="absolute -top-2 left-4 w-4 h-4 bg-white/95 border-t border-l border-gray-100/50 transform rotate-45"></div>
+        
+        <div class="relative z-10 p-4 flex flex-col gap-2">
+          <span id="live-status-badge" class="flex items-center gap-2 bg-gray-50/80 rounded-md px-2 py-1.5 w-fit border border-gray-200/50">
+            <span id="live-dot" class="w-2.5 h-2.5 rounded-full bg-gray-500 shadow-sm"></span>
+            <span id="live-text" class="text-[10px] font-bold tracking-widest uppercase font-sans text-gray-800">Checking...</span>
+          </span>
+          <p id="dynamic-hover-text" class="text-[var(--text-muted)] text-[11px] font-bold tracking-wide px-1"></p>
+          <div class="mt-1">
+            <span class="bg-[#fcd34d] text-[var(--accent-dark)] text-[10px] font-bold px-3 py-1.5 rounded shadow-sm uppercase tracking-wider cursor-pointer">
+              Hire This Agent
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden md:flex gap-8 text-sm font-semibold text-[var(--text-muted)]">
+      <button data-scroll-target="about" class="hover:text-[var(--text-main)] transition-colors nav-link-custom">About</button>
+      <button data-scroll-target="services" class="hover:text-[var(--text-main)] transition-colors nav-link-custom">Services</button>
+      <button data-scroll-target="portfolio" class="hover:text-[var(--text-main)] transition-colors nav-link-custom">Portfolio</button>
+      <button data-scroll-target="workflow" class="hover:text-[var(--text-main)] transition-colors nav-link-custom">Process</button>
+    </div>
+    <button data-scroll-target="contact" class="bg-[var(--accent-dark)] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+      Hire Me
+    </button>
+  </nav>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div id="toast" role="alert" aria-live="assertive">Copied to Clipboard!</div>
+  
+  <button id="backToTop" aria-label="Back to Top" data-scroll-target="top" class="group">
+    <svg class="w-7 h-7 text-[var(--text-main)] transition-transform duration-300 group-hover:-translate-y-1" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+       <path d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <header id="hero" class="flex items-center justify-center pattern-bg">
+   <div class="absolute inset-0 bg-gradient-to-br from-[var(--bg-main)] via-[var(--bg-surface)] to-[var(--bg-main)] opacity-70"></div>
+   <div class="absolute top-20 left-10 w-20 h-20 border-2 border-[var(--accent)] opacity-40 rounded-full float-slow"></div>
+   <div class="absolute bottom-32 right-16 w-32 h-32 border-2 border-[var(--accent)] opacity-30 rounded-full float-medium" style="animation-delay: 1s;"></div>
+   <div class="absolute top-40 right-20 w-4 h-4 bg-[var(--accent)] opacity-60 rounded-full float-fast" style="animation-delay: 0.5s;"></div>
+   
+   <div class="relative z-10 text-center px-6 max-w-4xl mt-12">
+    <div class="reveal-wrap block mb-4">
+      <p class="text-[var(--accent)] text-sm uppercase tracking-[0.3em] font-bold reveal-text block">Data Entry | Executive Assistant | Non-Voice</p>
+    </div>
+    
+    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight flex flex-col items-center justify-center">
+      <span class="reveal-wrap block"><span class="block reveal-text delay-reveal-1">Process Over</span></span>
+      <span class="reveal-wrap block"><span class="block text-[var(--accent)] reveal-text delay-reveal-2">Chaos</span></span>
+    </h1>
+    
+    <div class="reveal-wrap block mb-10 max-w-2xl mx-auto">
+      <p class="text-[var(--text-muted)] text-lg md:text-xl reveal-text delay-reveal-3 block">Hi, I'm <span class="text-[var(--text-main)] font-semibold">Jann Louie V. Coja</span> — An aspiring Virtual Assistant with a strong foundation in high-volume chat support. I am translating over 3 years of experience handling multiple technical and billing concerns simultaneously into reliable administrative support. I learn fast, adapt quickly, and clear your daily bottlenecks so you can focus on growing your business.</p>
+    </div>
+    
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-5 hero-element hero-delay-2">
+      <button data-scroll-target="about" class="btn-bubble-container btn-hover group relative flex items-center justify-center bg-[var(--accent)] text-[var(--text-main)] px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-transform duration-300">
+        Scroll to Explore
+        <div class="bubble-bottom font-sans">👇</div>
+      </button>
+      <a href="https://drive.google.com/file/d/1talWKQn7pjz5odJ9-VekDoTjs2XafrTk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-bubble-container btn-hover group relative flex items-center justify-center bg-white text-[var(--text-main)] border border-gray-200 px-8 py-4 rounded-full font-semibold text-lg shadow-sm transition-all duration-300 text-decoration-none">
+        📄 View Resume
+        <div class="bubble-top font-sans">📂</div>
+      </a>
+    </div>
+   </div>
+  </header>
+
+  <main>
+    <section id="about" class="bg-[var(--bg-surface)] z-10 relative">
+      <div class="ghost-emoji" style="right: 5%; top: 15%;">💬</div>
+      <div class="marquee-container" aria-hidden="true">
+        <div class="marquee-content">
+          <div class="marquee-item"><span class="marquee-star">✦</span> INBOX MANAGEMENT <span class="marquee-star">✦</span> CALENDAR OPTIMIZATION <span class="marquee-star">✦</span> DATA ENTRY <span class="marquee-star">✦</span> DIGITAL ORGANIZATION <span class="marquee-star">✦</span> REPORT PREPARATION</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> INBOX MANAGEMENT <span class="marquee-star">✦</span> CALENDAR OPTIMIZATION <span class="marquee-star">✦</span> DATA ENTRY <span class="marquee-star">✦</span> DIGITAL ORGANIZATION <span class="marquee-star">✦</span> REPORT PREPARATION</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> INBOX MANAGEMENT <span class="marquee-star">✦</span> CALENDAR OPTIMIZATION <span class="marquee-star">✦</span> DATA ENTRY <span class="marquee-star">✦</span> DIGITAL ORGANIZATION <span class="marquee-star">✦</span> REPORT PREPARATION</div>
+        </div>
+      </div>
+
+      <div class="min-h-[90vh] flex items-center py-20 md:py-32 overflow-hidden relative">
+       <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+         <div class="slide-left space-y-6">
+          <span class="text-[var(--accent)] text-sm uppercase tracking-[0.2em] font-bold">Get To Know Me</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold text-[var(--text-main)]">About Me</h2>
+          <div class="w-20 h-1 bg-[var(--accent)]"></div>
+          <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-6">With <span class="magic-highlight scroll-anim">3+ years</span> of experience in high-volume technical and billing chat support, I've mastered the art of managing digital chaos. I am used to routinely handling <span class="magic-highlight scroll-anim">4 concurrent queues</span> and complex problem-solving with exceptional accuracy and speed.</p>
+          <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-8">Because I thrive in highly focused, non-voice environments, I am translating my operational expertise into a dedicated Executive and Virtual Assistant role. I quickly master new tools to take over the crucial data entry, scheduling, and back-office tasks that distract busy professionals from growing their businesses.</p>
+          
+          <div class="pt-4">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-3 flex items-center gap-2">Core Toolkit & Skills <span class="text-xs font-normal text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">(Click to view)</span></h3>
+            <div class="flex flex-wrap gap-3" id="skill-pills" role="tablist">
+              <button data-skill="workspace" id="btn-workspace" role="tab" aria-selected="true" class="skill-btn px-4 py-2 bg-[var(--bg-main)] rounded-full text-sm font-bold text-[var(--text-main)] border border-gray-100 shadow-sm">Google Workspace</button>
+              <button data-skill="inbox" id="btn-inbox" role="tab" aria-selected="false" class="skill-btn px-4 py-2 bg-[var(--bg-main)] rounded-full text-sm font-bold text-[var(--text-main)] border border-gray-100 shadow-sm">Inbox Triage & Routing</button>
+              <button data-skill="calendar" id="btn-calendar" role="tab" aria-selected="false" class="skill-btn px-4 py-2 bg-[var(--bg-main)] rounded-full text-sm font-bold text-[var(--text-main)] border border-gray-100 shadow-sm">Calendar & Calendly</button>
+              <button data-skill="dashboards" id="btn-dashboards" role="tab" aria-selected="false" class="skill-btn px-4 py-2 bg-[var(--bg-main)] rounded-full text-sm font-bold text-[var(--text-main)] border border-gray-100 shadow-sm">Trello & Notion</button>
+              <button data-skill="data" id="btn-data" role="tab" aria-selected="false" class="skill-btn px-4 py-2 bg-[var(--bg-main)] rounded-full text-sm font-bold text-[var(--text-main)] border border-gray-100 shadow-sm">Data Entry & Reports</button>
+            </div>
+            <div id="skill-display" role="tabpanel" class="mt-5 p-6 bg-gray-50/50 rounded-xl border border-gray-100 opacity-0 transform translate-y-2 transition-all duration-300 min-h-[140px] flex flex-col justify-center"></div>
+          </div>
+         </div>
+         
+         <div class="slide-right">
+          <div class="relative group photo-container">
+           <div class="absolute -inset-4 bg-gradient-to-r from-[var(--accent)] to-[#e6edff] rounded-2xl opacity-60 blur-2xl transition-all duration-500 group-hover:opacity-80 group-hover:blur-3xl group-active:opacity-80 group-active:blur-3xl"></div>
+           <div class="fountain-container font-sans">
+               <span class="fountain-emoji e1">✨</span>
+               <span class="fountain-emoji e2">🚀</span>
+               <span class="fountain-emoji e3">💡</span>
+               <span class="fountain-emoji e4">💼</span>
+           </div>
+           <div class="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl aspect-square flex items-center justify-center border border-gray-200 overflow-hidden shadow-xl bg-white z-10 transition-transform duration-500 group-hover:scale-[1.02] group-active:scale-[1.02]">
+            <img src="https://i.postimg.cc/FHrKkpc9/profile.png" alt="Portrait of Jann Louie V. Coja" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105 group-active:scale-105" />
+            <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[var(--accent)] opacity-20 z-20 pointer-events-none transition-opacity duration-500 group-hover:opacity-40 group-active:opacity-40"></div>
+           </div>
+           <div class="orbit-bubble ob-1 font-sans">👋</div>
+           <div class="orbit-bubble ob-2 font-sans">✨</div>
+           <div class="orbit-bubble ob-3 font-sans">🚀</div>
+           <div class="airpods-pill">
+               <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+               <span class="text-[var(--text-main)] text-sm font-bold tracking-wide font-sans">Hire Me! 💼</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+    </section>
+
+    <section id="services" class="relative min-h-screen flex flex-col justify-start py-20 md:py-32 bg-[var(--bg-main)] pattern-bg border-t border-gray-200 overflow-visible z-10">
+     <div class="absolute top-1/2 left-0 w-96 h-96 bg-[var(--accent)] rounded-full mix-blend-multiply filter blur-[128px] opacity-40 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"></div>
+     
+     <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="text-center mb-16 slide-up">
+       <span class="text-[var(--accent)] text-sm uppercase tracking-[0.2em] font-bold">What I Do</span>
+       <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 text-[var(--text-main)]">Comprehensive Support</h2>
+       <div class="w-20 h-1 bg-[var(--accent)] mx-auto mt-6"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-6xl mx-auto mb-12">
+       <div class="service-card slide-up bg-[var(--bg-surface)] rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] group flex flex-col h-full md:col-span-1 md:row-span-2 relative">
+         <div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 ios-badge z-20 font-sans">99+</div>
+         <div class="w-14 h-14 shrink-0 bg-[#e6edff] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner mb-6">
+          <svg class="w-7 h-7 text-[var(--accent-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+         </div>
+         <h3 class="font-display text-2xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent-dark)] transition-colors">Inbox Management</h3>
+         <p class="text-[var(--text-muted)] text-sm leading-relaxed">Zero inbox anxiety. I organize, prioritize, and respond to emails so you never miss a critical business opportunity.</p>
+       </div>
+
+       <div class="service-card slide-up delay-1 bg-[var(--bg-surface)] rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] group flex flex-col justify-center h-full md:col-span-2 md:row-span-1 relative">
+         <div class="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 ios-badge z-20 font-sans">Focus</div>
+         <div class="w-14 h-14 shrink-0 bg-[#e6edff] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner mb-6">
+          <svg class="w-7 h-7 text-[var(--accent-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+         </div>
+         <h3 class="font-display text-2xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent-dark)] transition-colors">Executive Scheduling</h3>
+         <p class="text-[var(--text-muted)] text-sm leading-relaxed">Strategic calendar optimization that maximizes your daily productivity while fiercely protecting your deep-work hours.</p>
+       </div>
+
+       <div class="service-card slide-up delay-2 bg-[var(--bg-surface)] rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] group flex flex-col h-full md:col-span-1 md:row-span-1 relative">
+         <div class="absolute -top-3 -right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 ios-badge z-20 font-sans">Synced</div>
+         <div class="w-14 h-14 shrink-0 bg-[#e6edff] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner mb-6">
+          <svg class="w-7 h-7 text-[var(--accent-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+         </div>
+         <h3 class="font-display text-2xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent-dark)] transition-colors">Data & Trackers</h3>
+         <p class="text-[var(--text-muted)] text-sm leading-relaxed">Accurate, efficient data entry. I convert raw, scattered information into clean, actionable business trackers and spreadsheets.</p>
+       </div>
+
+       <div class="service-card slide-up delay-1 bg-[var(--bg-surface)] rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] group flex flex-col h-full md:col-span-1 md:row-span-1 relative">
+         <div class="absolute -top-3 -right-3 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 ios-badge z-20 font-sans">✨ New</div>
+         <div class="w-14 h-14 shrink-0 bg-[#e6edff] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner mb-6">
+          <svg class="w-7 h-7 text-[var(--accent-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+         </div>
+         <h3 class="font-display text-2xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent-dark)] transition-colors">Lifestyle & Personal</h3>
+         <p class="text-[var(--text-muted)] text-sm leading-relaxed">Managing the personal side of your busy life. From booking flights and travel itineraries to setting up daily planners and life admin.</p>
+       </div>
+
+       <div class="service-card slide-up delay-2 bg-[var(--bg-surface)] rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] group flex flex-col justify-center h-full md:col-span-2 md:row-span-1 relative">
+         <div class="absolute -top-3 -right-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 ios-badge z-20 font-sans">3 Active</div>
+         <div class="w-14 h-14 shrink-0 bg-[#e6edff] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner mb-6">
+          <svg class="w-7 h-7 text-[var(--accent-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
+         </div>
+         <h3 class="font-display text-2xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent-dark)] transition-colors">Customer & Chat Support</h3>
+         <p class="text-[var(--text-muted)] text-sm leading-relaxed">Leveraging years of high-volume technical support to handle your customer inquiries and ticket resolution with empathy and speed.</p>
+       </div>
+
+       <div class="service-card slide-up delay-3 bg-[var(--bg-surface)] rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] group flex flex-col md:flex-row items-start md:items-center gap-6 h-full md:col-span-4 md:row-span-1 relative">
+         <div class="absolute -top-3 -right-3 bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 ios-badge z-20 font-sans">Pro</div>
+         <div class="w-14 h-14 shrink-0 bg-[#e6edff] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+          <svg class="w-7 h-7 text-[var(--accent-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+         </div>
+         <div>
+          <h3 class="font-display text-2xl font-bold mb-3 text-[var(--text-main)] group-hover:text-[var(--accent-dark)] transition-colors">Custom Back-Office Support</h3>
+          <p class="text-[var(--text-muted)] text-sm leading-relaxed">Need something specific? I act as your dedicated administrative partner, handling delegated tasks based exactly on your requests. Simply provide the instructions or SOP, and I will reliably execute the daily tasks that keep your business running smoothly.</p>
+         </div>
+       </div>
+
+      </div>
+     </div>
+    </section>
+
+    <section id="portfolio" class="relative min-h-screen flex items-center py-20 md:py-32 bg-[var(--bg-surface)] border-t border-gray-100 overflow-hidden z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)]">
+     <div class="absolute top-1/2 right-0 w-96 h-96 bg-[var(--accent)] rounded-full mix-blend-multiply filter blur-[128px] opacity-40 translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"></div>
+     <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="text-center mb-16 slide-up">
+       <span class="text-[var(--accent)] text-sm uppercase tracking-[0.2em] font-bold">My Work</span>
+       <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 text-[var(--text-main)]">Featured Projects</h2>
+       <div class="w-20 h-1 bg-[var(--accent)] mx-auto mt-6"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+       <button data-modal-target="modal-inbox" class="portfolio-item slide-up rounded-2xl overflow-hidden shadow-lg border border-gray-100 group bg-white">
+        <div class="aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden">
+         <img src="https://i.postimg.cc/c1bjXFcK/Triage-is-created.png" alt="Inbox Management Project Thumbnail" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="portfolio-overlay flex flex-col justify-end">
+         <span class="text-[var(--accent-dark)] text-xs uppercase tracking-wider font-bold">Inbox Management</span>
+         <h3 class="font-display text-xl font-bold mt-2 text-[var(--text-main)]">Executive Support</h3>
+         <p class="text-[var(--text-muted)] text-sm mt-2 font-medium">Sorted chaotic emails into actionable labels.</p>
+         <div class="mt-4 text-xs font-bold text-[var(--accent-dark)] tracking-wide md:hidden group-hover:block" aria-hidden="true">🔍 CLICK TO VIEW DETAILS</div>
+        </div>
+       </button>
+       <button data-modal-target="modal-calendar" class="portfolio-item slide-up delay-1 rounded-2xl overflow-hidden shadow-lg border border-gray-100 group bg-white">
+        <div class="aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden">
+         <img src="https://i.postimg.cc/cHgYhF4r/Calendar.png" alt="Calendar Management Project Thumbnail" class="w-full h-full object-cover object-top" loading="lazy" />
+        </div>
+        <div class="portfolio-overlay flex flex-col justify-end">
+         <span class="text-[var(--accent-dark)] text-xs uppercase tracking-wider font-bold">Calendar Management</span>
+         <h3 class="font-display text-xl font-bold mt-2 text-[var(--text-main)]">Executive Scheduling</h3>
+         <p class="text-[var(--text-muted)] text-sm mt-2 font-medium">Built a strategic schedule with automated request forms.</p>
+         <div class="mt-4 text-xs font-bold text-[var(--accent-dark)] tracking-wide md:hidden group-hover:block" aria-hidden="true">🔍 CLICK TO VIEW DETAILS</div>
+        </div>
+       </button>
+       <button data-modal-target="modal-data" class="portfolio-item slide-up delay-2 rounded-2xl overflow-hidden shadow-lg border border-gray-100 group bg-white">
+         <div class="aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden">
+          <img src="https://i.postimg.cc/DZhcmkMz/data-thumbnail.png" alt="Data Management Project Thumbnail" class="w-full h-full object-cover" loading="lazy" />
+         </div>
+         <div class="portfolio-overlay flex flex-col justify-end">
+          <span class="text-[var(--accent-dark)] text-xs uppercase tracking-wider font-bold">Data & Systems</span>
+          <h3 class="font-display text-xl font-bold mt-2 text-[var(--text-main)]">Data Management</h3>
+          <p class="text-[var(--text-muted)] text-sm mt-2 font-medium">Executing rapid, accurate data entry to clear administrative backlogs.</p>
+          <div class="mt-4 text-xs font-bold text-[var(--accent-dark)] tracking-wide md:hidden group-hover:block" aria-hidden="true">🔍 CLICK TO VIEW DETAILS</div>
+         </div>
+       </button>
+      </div>
+     </div>
+    </section>
+
+    <section id="workflow" class="relative min-h-screen py-20 md:py-32 bg-[var(--bg-surface)] border-t border-gray-100 overflow-visible z-10">
+      <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-[var(--accent)] rounded-full mix-blend-multiply filter blur-[150px] opacity-30 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"></div>
+      <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#fcd34d] rounded-full mix-blend-multiply filter blur-[150px] opacity-10 translate-x-1/3 translate-y-1/3 pointer-events-none z-0"></div>
+      <div class="absolute text-8xl opacity-15 pointer-events-none z-0" style="left: 10%; top: 10%; animation: wideFloat 8s ease-in-out infinite;">⚙️</div>
+      <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+        <div class="text-center mb-16 slide-up">
+          <span class="text-[var(--accent)] text-sm uppercase tracking-[0.2em] font-bold">The Process</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 text-[var(--text-main)]">How I Work & Why Hire Me</h2>
+          <div class="w-20 h-1 bg-[var(--accent)] mx-auto mt-6"></div>
+        </div>
+
+        <div class="mb-24">
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-8 text-center slide-up delay-1">Why Hire Me?</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="service-card slide-up delay-1 md:col-span-2 bg-white rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] relative overflow-hidden group">
+              <div class="absolute -right-6 -top-6 text-9xl opacity-5 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:opacity-15 pointer-events-none z-0">⚡</div>
+              <h4 class="font-display text-xl font-bold mb-3 text-[var(--text-main)] relative z-10 group-hover:text-[var(--accent-dark)] transition-colors">Master of Concurrency</h4>
+              <p class="text-[var(--text-muted)] leading-relaxed relative z-10">Coming from a high-volume background where I successfully managed multiple complex tasks and customer queues simultaneously, I do not get overwhelmed by heavy workloads.</p>
+            </div>
+            <div class="service-card slide-up delay-2 bg-white rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 text-8xl opacity-5 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-12 group-hover:opacity-15 pointer-events-none z-0">🚀</div>
+              <h4 class="font-display text-xl font-bold mb-3 text-[var(--text-main)] relative z-10 group-hover:text-[var(--accent-dark)] transition-colors">Outcome-Oriented Speed</h4>
+              <p class="text-[var(--text-muted)] leading-relaxed relative z-10">I streamline bottlenecks into rapid, high-quality deliverables. I don't stretch the clock; I just get the work done efficiently.</p>
+            </div>
+            <div class="service-card slide-up delay-2 bg-white rounded-[2rem] p-8 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] relative overflow-hidden group">
+              <div class="absolute -right-4 -bottom-4 text-8xl opacity-5 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:opacity-15 pointer-events-none z-0">🎧</div>
+              <h4 class="font-display text-xl font-bold mb-3 text-[var(--text-main)] relative z-10 group-hover:text-[var(--accent-dark)] transition-colors">The "Non-Voice" Advantage</h4>
+              <p class="text-[var(--text-muted)] leading-relaxed relative z-10">Because I specialize strictly in non-voice support, my environment is designed for deep, uninterrupted focus.</p>
+            </div>
+            <div class="service-card slide-up delay-3 md:col-span-2 bg-[var(--accent-dark)] rounded-[2rem] p-8 border border-[var(--accent-dark)] shadow-md relative overflow-hidden group">
+              <div class="absolute -right-6 -top-6 text-9xl opacity-10 transition-all duration-500 group-hover:scale-125 group-hover:-rotate-12 group-hover:opacity-20 pointer-events-none z-0">🔒</div>
+              <h4 class="font-display text-xl font-bold mb-3 text-white relative z-10 group-hover:text-[#fcd34d] transition-colors">Uncompromising Data Security</h4>
+              <p class="text-gray-300 leading-relaxed relative z-10">Rigorously trained in Level 2 fraud checking, account security, and handling sensitive data. Your business information is completely safe with me.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-24 max-w-4xl mx-auto">
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-12 text-center slide-up">How I Work With Clients</h3>
+          
+          <div class="stack-container w-full max-w-4xl mx-auto pb-4 mt-8 relative">
+            
+            <div class="hidden md:block sticky top-[40vh] float-right right-0 -mr-20 z-0 pointer-events-none text-8xl opacity-15" style="animation: wideFloat 10s ease-in-out infinite reverse;">🧠</div>
+
+            <div class="stack-card">
+              <div class="slide-up bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                <div class="w-16 h-16 shrink-0 bg-white border-4 border-[var(--accent-dark)] rounded-full flex items-center justify-center text-2xl font-bold text-[var(--accent-dark)] shadow-[0_0_20px_var(--accent-glow)] group-hover:scale-110 transition-transform">1</div>
+                <div>
+                  <h4 class="font-display text-2xl font-bold text-[var(--text-main)] mb-3 group-hover:text-[var(--accent-dark)] transition-colors">Phase 1: Discovery & Audit</h4>
+                  <p class="text-[var(--text-muted)] text-base md:text-lg leading-relaxed">We start with a quick alignment or an asynchronous brief. You drop all your digital chaos, current bottlenecks, and goals onto me. I audit your workflows (inboxes, calendars, data trackers) to identify what can be immediately optimized.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-card">
+              <div class="slide-up bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                <div class="w-16 h-16 shrink-0 bg-white border-4 border-[var(--accent-dark)] rounded-full flex items-center justify-center text-2xl font-bold text-[var(--accent-dark)] shadow-[0_0_20px_var(--accent-glow)] group-hover:scale-110 transition-transform">2</div>
+                <div>
+                  <h4 class="font-display text-2xl font-bold text-[var(--text-main)] mb-3 group-hover:text-[var(--accent-dark)] transition-colors">Phase 2: System Setup</h4>
+                  <p class="text-[var(--text-muted)] text-base md:text-lg leading-relaxed">I integrate seamlessly into your preferred workspace. If you don’t have systems in place, I build them for you. We establish clear boundaries, priority labels, and a standard operating procedure (SOP) for your daily tasks.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-card">
+              <div class="slide-up bg-[var(--accent-dark)] rounded-3xl p-8 md:p-12 border border-gray-800 shadow-[0_10px_40px_-10px_rgba(41,84,133,0.4)] group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                <div class="w-16 h-16 shrink-0 bg-[#fcd34d] border-4 border-[#fcd34d] rounded-full flex items-center justify-center text-2xl font-bold text-[var(--text-main)] shadow-[0_0_20px_rgba(252,211,77,0.4)] group-hover:scale-110 transition-transform">3</div>
+                <div>
+                  <h4 class="font-display text-2xl font-bold text-white mb-3 group-hover:text-[#fcd34d] transition-colors">Phase 3: Execution</h4>
+                  <p class="text-gray-300 text-base md:text-lg leading-relaxed">I execute your back-office tasks silently and efficiently. You receive clean data, an empty inbox, and a perfectly organized calendar with asynchronous updates so you always know exactly what was handled.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto mb-10 relative">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-[var(--accent)] opacity-20 blur-[100px] pointer-events-none z-0 rounded-[100%]"></div>
+          
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-8 text-center slide-up relative z-10">Common Questions</h3>
+          
+          <div class="space-y-4 slide-up delay-2 relative z-10">
+            <details class="group bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm overflow-hidden open:bg-gradient-to-r open:from-[var(--bg-surface)] open:to-[#f0f4ff] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_var(--accent-glow)] cursor-pointer">
+              <summary class="flex justify-between items-center font-bold p-6 text-[var(--text-main)] group-open:text-[var(--accent-dark)] outline-none transition-colors duration-300">
+                What do you need from me to get started?
+                <svg class="w-6 h-6 text-[var(--accent-dark)] transition-transform duration-500 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-6 text-[var(--text-muted)] leading-relaxed text-sm faq-content">
+                Just a clear breakdown of your current bottlenecks and access to the platforms you want me to manage. I am highly proactive—once I have the initial instructions and SOPs, I leverage internal knowledge bases and root-cause analysis to figure things out independently without interrupting your day.
+              </div>
+            </details>
+            
+            <details class="group bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm overflow-hidden open:bg-gradient-to-r open:from-[var(--bg-surface)] open:to-[#f0f4ff] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_var(--accent-glow)] cursor-pointer">
+              <summary class="flex justify-between items-center font-bold p-6 text-[var(--text-main)] group-open:text-[var(--accent-dark)] outline-none transition-colors duration-300">
+                How do you handle time tracking?
+                <svg class="w-6 h-6 text-[var(--accent-dark)] transition-transform duration-500 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-6 text-[var(--text-muted)] leading-relaxed text-sm faq-content">
+                I operate on an outcome-based philosophy. Instead of heavy micromanagement or screen-monitoring software, I prefer using a standard Daily Time Record (DTR) and focusing strictly on deliverables. I work exceptionally fast; my goal is to complete your daily requirements accurately and efficiently, ensuring you receive a full day's worth of high-quality results without the friction of micromanaging the clock.
+              </div>
+            </details>
+            
+            <details class="group bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm overflow-hidden open:bg-gradient-to-r open:from-[var(--bg-surface)] open:to-[#f0f4ff] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_var(--accent-glow)] cursor-pointer">
+              <summary class="flex justify-between items-center font-bold p-6 text-[var(--text-main)] group-open:text-[var(--accent-dark)] outline-none transition-colors duration-300">
+                What are your working hours and availability? (PHT)
+                <svg class="w-6 h-6 text-[var(--accent-dark)] transition-transform duration-500 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-6 text-[var(--text-muted)] leading-relaxed text-sm faq-content">
+                I currently work a night shift (Thursday to Monday, 11:00 PM - 8:00 AM PHT).<br><br>
+                <strong class="text-[var(--text-main)]">For Part-Time / Hourly Projects:</strong> I am fully available on Tuesdays and Wednesdays, plus daily core hours from 10:00 AM to 2:00 PM for meetings and syncs.<br>
+                <strong class="text-[var(--text-main)]">For Full-Time Opportunities:</strong> I am actively looking for my next big career move and am ready to render a 30-day notice to my current employer for the ideal, long-term full-time partnership.
+              </div>
+            </details>
+            
+            <details class="group bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm overflow-hidden open:bg-gradient-to-r open:from-[var(--bg-surface)] open:to-[#f0f4ff] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_var(--accent-glow)] cursor-pointer">
+              <summary class="flex justify-between items-center font-bold p-6 text-[var(--text-main)] group-open:text-[var(--accent-dark)] outline-none transition-colors duration-300">
+                Do you handle inbound phone calls or voice support?
+                <svg class="w-6 h-6 text-[var(--accent-dark)] transition-transform duration-500 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-6 text-[var(--text-muted)] leading-relaxed text-sm faq-content">
+                No, I specialize strictly in non-voice back-office operations, data entry, inbox management, and chat/ticket support. This allows me to maintain deep focus on complex administrative tasks. However, I am fully available for weekly voice or video syncs to align on our goals!
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="slide-up delay-3 relative bg-gradient-to-r from-[var(--bg-surface)] to-[#fcf9f5] border border-[var(--accent)] rounded-2xl p-8 md:p-10 shadow-[0_10px_30px_var(--accent-glow)] overflow-hidden group mt-4 hover:shadow-[0_15px_40px_var(--accent-glow)] transition-all duration-500">
+          <div class="absolute top-0 left-0 w-1 h-full bg-[var(--accent-dark)]"></div>
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-[var(--text-main)] text-white text-xs font-bold px-4 py-1.5 rounded-b-xl shadow-lg transform -translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 z-20 flex items-center gap-2 font-sans">
+            <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> Ready to Train
+          </div>
+          <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div class="w-16 h-16 shrink-0 bg-white rounded-full flex items-center justify-center border border-[#fcd34d]" style="animation: pulseGlow 3s infinite;">
+              <span class="text-3xl" style="animation: floatAnimation 3s ease-in-out infinite;">💡</span>
+            </div>
+            <div>
+              <h3 class="font-display text-xl md:text-2xl font-bold text-[var(--text-main)] mb-2">Open to Expanding My Role & Tasks</h3>
+              <p class="text-[var(--text-muted)] text-sm md:text-base leading-relaxed">
+                My services are <strong class="text-[var(--accent-dark)]">not limited</strong> to the grid above. As your business grows, my role can grow with it. I am completely open to taking on new responsibilities, learning new skills, and expanding my scope of work. 
+                <strong class="shimmer-text font-bold mt-2 block">Simply provide the instructions, a video walkthrough, or an SOP, and I will quickly master your proprietary software and execute your unique workflows flawlessly.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="relative bg-[var(--bg-main)] pattern-bg z-20 flex flex-col shadow-[0_-20px_40px_rgba(0,0,0,0.05)]">
+      <div class="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none z-0">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-[50px] md:h-[100px] fill-[var(--bg-main)]" aria-hidden="true">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,121.32,196.4,110.59,239.5,103.54,281.4,85.6,321.39,56.44Z"></path>
+          </svg>
+      </div>
+      <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="ghost-emoji" style="left: 5%; top: 30%; animation-delay: -15s;">📂</div>
+      </div>
+      <div class="pt-32 pb-16 px-6 max-w-6xl mx-auto w-full text-center relative z-10 mt-10">
+        <div class="slide-up inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200 mb-6 mx-auto">
+            <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_12px_rgba(34,197,94,1)]"></span>
+            <span class="text-xs font-bold text-green-600 uppercase tracking-widest">Status: Available for Part-Time Engagements</span>
+        </div>
+        
+        <div class="mb-8 slide-up text-center">
+          <div class="text-4xl md:text-6xl font-bold text-[var(--text-main)] mb-6 font-display flex flex-col justify-center items-center text-center">
+            <span class="mb-2">Let's</span>
+            <div class="relative h-[1.4em] overflow-hidden flex items-start text-[var(--accent-dark)] w-full justify-center">
+               <div class="animate-slot-machine flex flex-col items-center w-full">
+                 <span class="h-[1.4em] flex items-center justify-center leading-normal">SCALE</span>
+                 <span class="h-[1.4em] flex items-center justify-center leading-normal">ORGANIZE</span>
+                 <span class="h-[1.4em] flex items-center justify-center leading-normal">STREAMLINE</span>
+                 <span class="h-[1.4em] flex items-center justify-center leading-normal">OPTIMIZE</span>
+                 <span class="h-[1.4em] flex items-center justify-center leading-normal">SCALE</span>
+               </div>
+            </div>
+            <span class="mt-2">your business.</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-5xl font-bold text-[var(--text-main)] opacity-80">Ready to Open a VIP Support Ticket?</h2>
+          <p class="text-[var(--text-muted)] text-lg mt-4 max-w-2xl mx-auto">Click a channel below to copy details. I currently work a Thu–Mon night shift. I am available now for <span class="text-[var(--accent-dark)] font-semibold">part-time roles</span> (Tue/Wed + daily 10AM-2PM), or ready to render a 30-day notice for the ideal full-time partnership.</p>
+        </div>
+
+      </div>
+      <div class="px-6 pb-48 max-w-6xl mx-auto w-full relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+          <button data-copy="janncoja@gmail.com" class="support-card slide-up delay-1 group">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center text-[var(--accent-dark)] mb-3 mx-auto transition-transform group-hover:scale-110">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">Email</span>
+            <span class="text-[var(--text-muted)] text-xs md:text-sm font-medium">janncoja@gmail.com</span>
+            <div class="cheeky-text">Click to copy email address. 🚀</div>
+          </button>
+          <button data-copy="09524571403" class="support-card slide-up delay-1 group px-2">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center text-[var(--accent-dark)] mb-3 mx-auto transition-transform group-hover:scale-110">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">Phone & WA</span>
+            <span class="text-[var(--text-muted)] text-[11px] md:text-xs font-medium leading-tight mt-1">
+              0952 457 1403 | 0963 225 7031<br>Imus, Cavite, PH
+            </span>
+            <div class="cheeky-text">Click to copy phone number. 🎵</div>
+          </button>
+          <a href="https://www.linkedin.com/in/jannlouiecoja/" target="_blank" rel="noopener noreferrer" class="support-card slide-up delay-2 group">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center text-[var(--accent-dark)] mb-3 mx-auto transition-transform group-hover:scale-110">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">LinkedIn</span>
+            <span class="text-[var(--text-muted)] text-xs md:text-sm font-medium">View Profile</span>
+            <div class="cheeky-text">Let's connect (I don't bite). 🤝</div>
+          </a>
+          <div class="support-card slide-up delay-2 group px-2 cursor-pointer" tabindex="0">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center text-[var(--accent-dark)] mb-3 mx-auto transition-transform group-hover:scale-110">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">Availability (PHT)</span>
+            <span class="text-[var(--text-muted)] text-[11px] md:text-xs font-medium leading-tight mt-1 block">
+              Shift: Thu - Mon (11PM - 8AM)<br>Available: Tue/Wed + Daily 10AM-2PM
+            </span>
+            <div class="cheeky-text flex flex-col items-center justify-center">
+              <span id="pht-clock" class="font-mono text-sm font-bold text-[var(--accent-dark)]" aria-live="polite">--:--:-- --</span>
+              <span id="time-cheeky-text" class="text-[10px] mt-0.5">Checking status...</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex items-center justify-center mt-12 mb-8 slide-up delay-2">
+            <div class="h-px bg-[var(--accent)] opacity-30 w-12 md:w-24"></div>
+            <span class="text-[var(--text-muted)] text-[10px] md:text-xs uppercase tracking-[0.2em] px-4 font-bold">Freelance Platforms</span>
+            <div class="h-px bg-[var(--accent)] opacity-30 w-12 md:w-24"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 w-full max-w-4xl mx-auto">
+          <a href="https://www.upwork.com/freelancers/~0114258016202b36a3" target="_blank" rel="noopener noreferrer" class="support-card slide-up delay-3 opacity-90 hover:opacity-100 group">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center mb-3 mx-auto transition-transform group-hover:scale-110">
+              <img src="https://cdn.simpleicons.org/upwork/295485" alt="Upwork Logo" class="w-6 h-6" />
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">Upwork</span>
+            <span class="text-[var(--text-muted)] text-xs md:text-sm font-medium">View Profile</span>
+            <div class="cheeky-text">Hire me on Upwork. ⭐</div>
+          </a>
+          <a href="https://v2.onlinejobs.ph/jobseekers/info/1388994" target="_blank" rel="noopener noreferrer" class="support-card slide-up delay-3 opacity-90 hover:opacity-100 group">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center text-[var(--accent-dark)] mb-3 mx-auto transition-transform group-hover:scale-110">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">OnlineJobs.ph</span>
+            <span class="text-[var(--text-muted)] text-xs md:text-sm font-medium">View Profile</span>
+            <div class="cheeky-text">Your next great hire. 💼</div>
+          </a>
+          <a href="https://www.fiverr.com/s/WERd3o5" target="_blank" rel="noopener noreferrer" class="support-card slide-up delay-4 opacity-90 hover:opacity-100 group">
+            <div class="w-12 h-12 bg-[#e6edff] rounded-full flex items-center justify-center mb-3 mx-auto transition-transform group-hover:scale-110">
+              <img src="https://cdn.simpleicons.org/fiverr/295485" alt="Fiverr Logo" class="w-6 h-6" />
+            </div>
+            <span class="text-base font-bold text-[var(--text-main)] mb-1">Fiverr</span>
+            <span class="text-[var(--text-muted)] text-xs md:text-sm font-medium">View Profile</span>
+            <div class="cheeky-text">5-star service ready. 🌟</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[var(--accent-dark)] w-full pt-16 relative z-20 overflow-hidden flex flex-col items-center justify-between mt-auto min-h-[300px]">
+    <div class="text-center text-sm text-gray-300 font-medium z-10 px-6">
+      © 2026 Jann Louie V. Coja. All rights reserved.
+    </div>
+    <div class="w-full relative mt-16 flex justify-center items-end pointer-events-none select-none h-[22vw] overflow-hidden">
+       <div class="absolute bottom-0 left-0 w-full h-[45%] bg-gradient-to-t from-[var(--accent-dark)] to-transparent z-10"></div>
+       <span class="font-display text-[22vw] font-black leading-none text-white tracking-tighter translate-y-[28%] z-0 opacity-90">
+         JANN LOUIE.
+       </span>
+    </div>
+  </footer>
+
+  <div id="modal-inbox" class="modal-backdrop" aria-modal="true" role="dialog" tabindex="-1">
+    <div class="modal-content overflow-hidden flex flex-col h-[95vh] md:h-[85vh] w-[95%] max-w-[1200px] relative">
+      <button class="modal-close z-50 absolute top-4 right-4" data-close-modal="modal-inbox" aria-label="Close modal">&times;</button>
+      <div class="flex-1 flex flex-col md:grid md:grid-cols-5 min-h-0">
+        <div class="md:col-span-3 flex items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-200/50 relative h-[40vh] md:h-full overflow-hidden shrink-0">
+          <button class="gallery-nav left-4 md:left-8 z-40" data-nav="inbox-prev" aria-label="Previous image">❮</button>
+          <button class="gallery-nav right-4 md:right-8 z-40" data-nav="inbox-next" aria-label="Next image">❯</button>
+          <img id="inbox-slide-img" src="" alt="Inbox management slide" class="max-w-full max-h-full rounded-xl shadow-2xl object-contain relative z-10" data-open-lightbox="inbox" loading="lazy">
+        </div>
+        <div class="md:col-span-2 p-6 md:p-10 overflow-y-auto inbox-scroll-panel flex-1 md:h-full text-left flex flex-col">
+          <div>
+            <span id="slide-index" class="text-[var(--accent-dark)] text-xs uppercase tracking-widest font-bold mb-2 block font-sans">Step 1 of 8</span>
+            <h2 id="slide-title" class="font-display text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-6">Before Triage</h2>
+            <div id="slide-description" class="text-[var(--text-muted)] text-sm leading-relaxed mb-4 font-sans"></div>
+            <div class="mt-8 border-t border-gray-200/50 pt-8">
+              <h4 class="text-[var(--text-main)] font-bold text-xs uppercase tracking-wide mb-4 font-sans">5-Tier Master Triage Legend</h4>
+              <div id="tier-breakdown-list" class="space-y-3 pb-6"></div>
+            </div>
+          </div>
+          <div class="mt-auto pt-6 border-t border-gray-200/50 text-center">
+            <button data-close-modal="modal-inbox" data-scroll-target="contact" class="w-full bg-[var(--accent-dark)] text-white px-6 py-3 rounded-full font-bold text-sm shadow-md transition-transform active:scale-95 font-sans">
+              Need this for your business? Let's talk.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-calendar" class="modal-backdrop" aria-modal="true" role="dialog" tabindex="-1">
+    <div class="modal-content overflow-hidden flex flex-col md:flex-row h-[95vh] md:h-[85vh] w-[95%] max-w-[1200px] relative">
+      <button class="modal-close z-50 absolute top-4 right-4" data-close-modal="modal-calendar" aria-label="Close modal">&times;</button>
+      <div class="w-full md:w-[60%] h-[45vh] md:h-full flex flex-col items-center justify-center p-8 border-b md:border-b-0 md:border-r border-gray-200/50 shrink-0">
+        <div class="relative w-full h-full flex items-center justify-center">
+          <img src="https://i.postimg.cc/cHgYhF4r/Calendar.png" alt="Full Calendar System Screenshot" class="calendar-zoom-img max-w-full max-h-full rounded-xl shadow-2xl object-contain relative z-10" data-open-lightbox="static" loading="lazy">
+        </div>
+      </div>
+      <div class="w-full md:w-[40%] h-[50vh] md:h-full overflow-y-auto p-8 md:p-12 inbox-scroll-panel text-left flex flex-col">
+        <div>
+          <span class="text-[var(--accent-dark)] text-xs uppercase tracking-widest font-bold mb-2 block mt-6 md:mt-0 font-sans">Project 02</span>
+          <h2 class="font-display text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-4">Calendar Organization</h2>
+          <div class="space-y-4 font-sans">
+            <div>
+              <h4 class="text-[var(--text-main)] font-bold text-xs uppercase tracking-wide mb-1 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-dark)]"></span> The Problem
+              </h4>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed">High-level executives struggle with chaotic schedules. Managing changes manually can cause delays.</p>
+            </div>
+            <div>
+              <h4 class="text-[var(--text-main)] font-bold text-xs uppercase tracking-wide mb-1 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-dark)]"></span> The Solution
+              </h4>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed">I organized the Google Calendar using a strict "Work Rhythm" legend to clearly categorize different types of tasks and meetings.</p>
+            </div>
+          </div>
+          <div class="mt-6 border-t border-gray-200/50 pt-5 font-sans">
+            <h4 class="text-[var(--text-main)] font-bold text-xs uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[var(--text-main)]"></span> The Work Rhythm Legend
+            </h4>
+            <div class="bg-white/50 backdrop-blur-sm rounded-lg p-3 border border-gray-100/50 mb-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-2 mb-3">
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Tomato:</strong> No-Change / Lock</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-orange-500 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Tangerine:</strong> Action Required</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Banana:</strong> Flexible / Floating</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-purple-800 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Grape:</strong> Deep Work & Strategy</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-800 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Blueberry:</strong> External Meetings</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-400 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Peacock:</strong> Internal Team</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gray-500 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Graphite:</strong> Tech / Admin</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-800 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Basil:</strong> Hard Stops</span>
+                </div>
+                <div class="flex items-start gap-2 text-[11px]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400 flex-shrink-0 mt-0.5 shadow-sm"></span>
+                  <span class="text-[var(--text-muted)]"><strong class="text-[var(--text-main)]">Sage:</strong> Quiet Recharge</span>
+                </div>
+              </div>
+              <div class="border-t border-gray-200/50 pt-2 mt-1">
+                <h5 class="text-[var(--text-main)] font-bold text-[10px] uppercase tracking-wider mb-2">Event Title Emojis</h5>
+                <div class="flex flex-wrap gap-1.5 text-[10px] text-[var(--text-muted)]">
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">🚫 No-Change</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">🚨 Critical</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">⚠️ Needs Prep</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">📌 Pinned</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">🔄 Reschedule</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">🤝 External</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">👥 Internal</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">🧠 Deep Work</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">💻 Admin</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">✈️ Travel</span>
+                  <span class="bg-white/60 border border-gray-200/50 px-1.5 py-0.5 rounded shadow-sm">☕ Break</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto pt-6 border-t border-gray-200/50 text-center font-sans">
+          <button data-close-modal="modal-calendar" data-scroll-target="contact" class="w-full bg-[var(--accent-dark)] text-white px-6 py-3 rounded-full font-bold text-sm shadow-md transition-transform active:scale-95">
+            Let's organize your schedule.
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-data" class="modal-backdrop" aria-modal="true" role="dialog" tabindex="-1">
+    <div class="modal-content overflow-hidden flex flex-col md:flex-row h-[95vh] md:h-[85vh] w-[95%] max-w-[1200px] relative">
+      <button class="modal-close z-50 absolute top-4 right-4" data-close-modal="modal-data" aria-label="Close modal">&times;</button>
+      <div class="flex-1 flex flex-col md:grid md:grid-cols-5 min-h-0">
+        <div class="md:col-span-3 flex items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-200/50 relative h-[40vh] md:h-full overflow-hidden shrink-0">
+          <button class="gallery-nav left-4 md:left-8 z-40" data-nav="data-prev" aria-label="Previous image">❮</button>
+          <button class="gallery-nav right-4 md:right-8 z-40" data-nav="data-next" aria-label="Next image">❯</button>
+          <img id="data-slide-img" src="" alt="Data management slide" class="max-w-full max-h-full rounded-xl shadow-2xl object-contain transition-transform duration-300 relative z-10" data-open-lightbox="data" title="Click to open full screen" loading="lazy">
+        </div>
+        <div class="md:col-span-2 p-6 md:p-10 overflow-y-auto inbox-scroll-panel flex-1 md:h-full text-left flex flex-col">
+          <div>
+            <span id="data-slide-index" class="text-[var(--accent-dark)] text-xs uppercase tracking-widest font-bold mb-2 block mt-6 md:mt-0 font-sans">Step 1 of 4</span>
+            <h2 id="data-slide-title" class="font-display text-2xl md:text-3xl font-bold text-[var(--text-main)] mb-4">Backlog Clearance</h2>
+            <p id="data-slide-description" class="text-[var(--text-muted)] text-sm leading-relaxed mb-6 min-h-[60px] font-sans"></p>
+            <div class="border-t border-gray-200/50 pt-8 mb-6 font-sans">
+              <h4 class="text-[var(--text-main)] font-bold text-xs uppercase tracking-widest mb-6">Workflow Breakdown</h4>
+              <div class="space-y-4">
+                <button type="button" class="w-full text-left bg-white/60 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100/50 border-l-4 border-l-blue-500 cursor-pointer transition-transform active:scale-95" data-go-data-slide="0">
+                  <h5 class="font-bold text-gray-800 text-sm mb-1">1. Data Consolidation</h5>
+                  <p class="text-gray-500 text-xs leading-relaxed">Gathering scattered information from multiple chats and queues into a centralized, easy-to-read tracker.</p>
+                </button>
+                <button type="button" class="w-full text-left bg-white/60 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100/50 border-l-4 border-l-yellow-400 cursor-pointer transition-transform active:scale-95" data-go-data-slide="1">
+                  <h5 class="font-bold text-gray-800 text-sm mb-1">2. High-Volume Processing</h5>
+                  <p class="text-gray-500 text-xs leading-relaxed">Clearing essential administrative backlogs efficiently while successfully handling multiple concurrent concerns.</p>
+                </button>
+                <button type="button" class="w-full text-left bg-white/60 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100/50 border-l-4 border-l-green-500 cursor-pointer transition-transform active:scale-95" data-go-data-slide="2">
+                  <h5 class="font-bold text-gray-800 text-sm mb-1">3. Strict Data Privacy</h5>
+                  <p class="text-gray-500 text-xs leading-relaxed">Maintaining absolute confidentiality. I enforce strict data privacy standards and never compromise sensitive client information.</p>
+                </button>
+                <button type="button" class="w-full text-left bg-white/60 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100/50 border-l-4 border-l-gray-600 cursor-pointer transition-transform active:scale-95" data-go-data-slide="3">
+                  <h5 class="font-bold text-gray-800 text-sm mb-1">4. Ongoing Maintenance</h5>
+                  <p class="text-gray-500 text-xs leading-relaxed">Establishing simple daily spreadsheet routines to ensure these essential back-office tasks never pile up again.</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-auto pt-6 border-t border-gray-200/50 text-center font-sans">
+            <button data-close-modal="modal-data" data-scroll-target="contact" class="w-full bg-[var(--accent-dark)] text-white px-6 py-3 rounded-full font-bold text-sm shadow-md transition-transform active:scale-95">
+              Clear your backlogs with me.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fullscreen-lightbox" aria-modal="true" role="dialog" tabindex="-1">
+    <button class="lightbox-close" data-close-lightbox="true" aria-label="Close Lightbox">&times;</button>
+    <button id="lb-prev" class="lightbox-nav" data-nav="lightbox-prev" aria-label="Previous image">❮</button>
+    <button id="lb-next" class="lightbox-nav" data-nav="lightbox-next" aria-label="Next image">❯</button>
+    <img id="lightbox-image" src="" alt="Fullscreen Image View">
+    <div id="lightbox-caption" class="lightbox-caption font-sans"></div>
+  </div>
+
+  <script>
+    const inboxSlides = [
+      { title: "Digital Chaos (Before)", img: "https://i.postimg.cc/pdpcfRbg/Before-triage.png", desc: "This image shows the starting point: an unorganized inbox with over 300 unread emails, where important messages are mixed with newsletters and receipts." },
+      { title: "Tier 1: ⭐ VIP Priority", img: "https://i.postimg.cc/FHVXWjRG/vip-urgent.png", desc: "This shows how messages from key people are starred so they stay visible at the top of the inbox." },
+      { title: "Tier 2: 🚨 Urgency Alert", img: "https://i.postimg.cc/8c6qhv9R/urgenvip.png", desc: "This highlights the use of a red label to mark time-sensitive emails that need an immediate response." },
+      { title: "Tier 3: Admin & Billing", img: "https://i.postimg.cc/vHpMk0hc/admin-billing.png", desc: "This example shows invoices and operational emails grouped together to keep them out of the main conversation view." },
+      { title: "Tier 4: Label Hierarchy", img: "https://i.postimg.cc/BbLmrGBz/showing-zoomed-labels.png", desc: "A closer look at the customized folder structure and color-coded labels created to organize different types of emails." },
+      { title: "Tier 5: Knowledge Bank", img: "https://i.postimg.cc/PxPG59M4/news-letter-read-later.png", desc: "This shows industry newsletters and subscriptions filed into a separate folder for reading during free time." },
+      { title: "Tier 6: The 300+ Sweep", img: "https://i.postimg.cc/SQnqS2T2/downtime-newsletter.png", desc: "This illustrates how over 300 promotional and marketing emails were cleared out and moved to a 'Downtime' folder." },
+      { title: "Organized Clarity (After)", img: "https://i.postimg.cc/c1bjXFcK/Triage-is-created.png", desc: "The final outcome: a fully sorted inbox showing clear labels, organized folders, and a zero-clutter main dashboard." }
+    ];
+
+    const labelsData = [
+      { label: "⭐ VIP - URGENT", detail: "Used for critical communications from key stakeholders, marked with a star to stay at the top.", slideIndex: 1 },
+      { label: "🚨 URGENT: VIP", detail: "A red label applied to time-sensitive emails that require a fast response.", slideIndex: 2 },
+      { label: "💻 Admin & Billing", detail: "A designated folder for organizing invoices, receipts, and standard operational updates.", slideIndex: 3 },
+      { label: "📰 Newsletters", detail: "A separate folder for storing valuable industry insights and subscriptions for later reading.", slideIndex: 5 },
+      { label: "☕ DOWNTIME", detail: "A catch-all folder used to clear out promotional marketing and cold outreach from the main inbox.", slideIndex: 6 }
+    ];
+
+    const dataSlides = [
+      { title: "Consolidating Chaos", img: "https://i.postimg.cc/R0KRMVGH/data-step1-consolidation.png", desc: "Before optimization, crucial client data is often scattered across various platforms. The first step is centralizing all raw information into a clean Google Sheet using automated extraction." },
+      { title: "High-Volume Processing", img: "https://i.postimg.cc/xdMR0Tgp/data-step2-processing.png", desc: "With multiple concerns happening at once, I process and organize the backlogged data rapidly with professional dashboard formatting and dropdown triaging." },
+      { title: "Strict Data Privacy", img: "https://i.postimg.cc/k4CyD3hj/data-step3-privacy.png", desc: "All trackers are secured with strict access controls. I am uncompromising when it comes to maintaining the confidentiality of sensitive business data." },
+      { title: "Daily Maintenance", img: "https://i.postimg.cc/MTwYX2F2/data-step4-maintenance.png", desc: "The final dashboard. A color-coded, organized system that includes filters and separate reporting tabs, ensuring tasks never pile up again." }
+    ];
+
+    const skillsData = {
+      workspace: {
+        title: "Google Workspace Mastery",
+        desc: "Complete ecosystem management. Organizing Google Drive files, formatting Docs/Sheets, and utilizing advanced features to keep business operations centralized and secure.",
+        icons: `<div class="flex gap-6 mt-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Gmail">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg" alt="Google Drive Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Google Drive">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg" alt="Google Sheets Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Google Sheets">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Google Calendar Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Google Calendar">
+                </div>`
+      },
+      inbox: {
+        title: "Inbox Triage & Routing",
+        desc: "Transforming chaotic inboxes into organized systems using strict labeling, automated filters, and priority routing to ensure critical emails are handled immediately and zero opportunities are missed.",
+        icons: `<div class="flex gap-6 mt-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Gmail">
+                  <img src="https://img.icons8.com/color/144/microsoft-outlook-2019--v2.png" alt="Microsoft Outlook Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Microsoft Outlook">
+                </div>`
+      },
+      calendar: {
+        title: "Calendar & Calendly Integration",
+        desc: "Connecting scheduling tools like Calendly directly to your main calendar. This automates appointment bookings, completely eliminates back-and-forth emails, and perfectly protects your deep work blocks.",
+        icons: `<div class="flex items-center gap-6 mt-4">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Google Calendar Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Google Calendar">
+                  <span class="font-bold text-[var(--accent-dark)] text-xl transition-transform cursor-pointer hover:-translate-y-1 hover:scale-105 active:scale-95 font-sans">Calendly</span>
+                </div>`
+      },
+      dashboards: {
+        title: "Trello & Notion Dashboards",
+        desc: "Building visual Kanban boards (Trello) to track daily task progress, alongside comprehensive digital workspaces (Notion) for documenting Standard Operating Procedures (SOPs) and company wikis.",
+        icons: `<div class="flex items-center gap-6 mt-4">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Trello_logo.svg" alt="Trello Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Trello">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Notion">
+                </div>`
+      },
+      data: {
+        title: "Data Entry & Reports",
+        desc: "Accurate, highly efficient data management. Translating raw information into clear, actionable business reports, spreadsheets, and trackers to support daily operational decisions.",
+        icons: `<div class="flex gap-6 mt-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg" alt="Google Sheets Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Google Sheets">
+                  <img src="https://img.icons8.com/color/144/microsoft-excel-2019--v1.png" alt="Microsoft Excel Icon" class="h-8 transition-transform duration-300 drop-shadow-sm cursor-pointer hover:-translate-y-2 hover:scale-110 active:scale-95" title="Microsoft Excel">
+                </div>`
+      }
+    };
+
+    let currentInboxSlide = 0;
+    let currentDataSlide = 0;
+    let lbArray = [];
+    let lbIndex = -1;
+    let lbSyncCallback = null;
+    let lastFocusedElement = null;
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById("toast");
+        toast.classList.add("show");
+        setTimeout(() => { toast.classList.remove("show"); }, 3000);
+      });
+    }
+
+    function showSkill(skillKey) {
+        document.querySelectorAll('.skill-btn').forEach(btn => {
+            btn.classList.remove('bg-[var(--accent-dark)]', 'text-white');
+            btn.classList.add('bg-[var(--bg-main)]', 'text-[var(--text-main)]');
+            btn.setAttribute('aria-selected', 'false');
+        });
+        const activeBtn = document.getElementById('btn-' + skillKey);
+        activeBtn.classList.remove('bg-[var(--bg-main)]', 'text-[var(--text-main)]');
+        activeBtn.classList.add('bg-[var(--accent-dark)]', 'text-white');
+        activeBtn.setAttribute('aria-selected', 'true');
+        
+        const panel = document.getElementById('skill-display');
+        panel.classList.remove('skill-panel-enter');
+        setTimeout(() => {
+            panel.innerHTML = `<h5 class="font-bold text-[var(--text-main)] text-sm uppercase mb-2 tracking-wide font-sans">${skillsData[skillKey].title}</h5><p class="text-[var(--text-muted)] text-sm leading-relaxed font-sans">${skillsData[skillKey].desc}</p>${skillsData[skillKey].icons}`;
+            panel.classList.add('skill-panel-enter');
+        }, 150);
+    }
+
+    function updateInboxSlide() {
+      const s = inboxSlides[currentInboxSlide];
+      document.getElementById('inbox-slide-img').src = s.img;
+      document.getElementById('slide-title').innerText = s.title;
+      document.getElementById('slide-description').innerText = s.desc;
+      document.getElementById('slide-index').innerText = `Step ${currentInboxSlide + 1} of ${inboxSlides.length}`;
+    }
+    function nextInboxSlide() { currentInboxSlide = (currentInboxSlide + 1) % inboxSlides.length; updateInboxSlide(); }
+    function prevInboxSlide() { currentInboxSlide = (currentInboxSlide - 1 + inboxSlides.length) % inboxSlides.length; updateInboxSlide(); }
+    function goToInboxSlide(index) { currentInboxSlide = parseInt(index); updateInboxSlide(); }
+
+    function updateDataSlide() {
+      const s = dataSlides[currentDataSlide];
+      document.getElementById('data-slide-img').src = s.img;
+      document.getElementById('data-slide-title').innerText = s.title;
+      document.getElementById('data-slide-description').innerText = s.desc;
+      document.getElementById('data-slide-index').innerText = `Step ${currentDataSlide + 1} of ${dataSlides.length}`;
+    }
+    function nextDataSlide() { currentDataSlide = (currentDataSlide + 1) % dataSlides.length; updateDataSlide(); }
+    function prevDataSlide() { currentDataSlide = (currentDataSlide - 1 + dataSlides.length) % dataSlides.length; updateDataSlide(); }
+    function goToDataSlide(index) { currentDataSlide = parseInt(index); updateDataSlide(); }
+
+    function openInboxLightbox() {
+      lbArray = inboxSlides;
+      lbIndex = currentInboxSlide;
+      lbSyncCallback = goToInboxSlide;
+      updateLightboxContent();
+      showLightbox();
+    }
+
+    function openDataLightbox() {
+      lbArray = dataSlides;
+      lbIndex = currentDataSlide;
+      lbSyncCallback = goToDataSlide;
+      updateLightboxContent();
+      showLightbox();
+    }
+
+    function openStaticLightbox(imageSrc) {
+      lbArray = [];
+      lbSyncCallback = null;
+      document.getElementById('lightbox-image').src = imageSrc;
+      document.getElementById('lightbox-caption').innerText = "";
+      document.getElementById('lb-prev').style.display = 'none';
+      document.getElementById('lb-next').style.display = 'none';
+      showLightbox();
+    }
+
+    function showLightbox() {
+      document.getElementById('fullscreen-lightbox').classList.add('show');
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      trapFocus(document.getElementById('fullscreen-lightbox'));
+    }
+
+    function updateLightboxContent() {
+      const data = lbArray[lbIndex];
+      document.getElementById('lightbox-image').src = data.img;
+      document.getElementById('lightbox-caption').innerText = data.desc;
+      document.getElementById('lb-prev').style.display = 'flex';
+      document.getElementById('lb-next').style.display = 'flex';
+    }
+
+    function closeLightbox(e) { 
+      if(e) e.stopPropagation();
+      document.getElementById('fullscreen-lightbox').classList.remove('show'); 
+      if (document.querySelectorAll('.modal-backdrop.show').length === 0) {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+      }
+      if(lastFocusedElement) lastFocusedElement.focus();
+    }
+
+    function prevLightbox(e) {
+      if(e) e.stopPropagation();
+      if (lbArray.length === 0) return;
+      lbIndex = (lbIndex - 1 + lbArray.length) % lbArray.length;
+      updateLightboxContent();
+      if (lbSyncCallback) lbSyncCallback(lbIndex);
+    }
+
+    function nextLightbox(e) {
+      if(e) e.stopPropagation();
+      if (lbArray.length === 0) return;
+      lbIndex = (lbIndex + 1) % lbArray.length;
+      updateLightboxContent();
+      if (lbSyncCallback) lbSyncCallback(lbIndex);
+    }
+
+    function trapFocus(modal) {
+      const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+      let focusableElements = modal.querySelectorAll(focusableElementsString);
+      focusableElements = Array.prototype.slice.call(focusableElements);
+
+      if (focusableElements.length === 0) return;
+
+      const firstTabStop = focusableElements[0];
+      const lastTabStop = focusableElements[focusableElements.length - 1];
+
+      firstTabStop.focus();
+
+      modal.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) { 
+            if (document.activeElement === firstTabStop) {
+              e.preventDefault();
+              lastTabStop.focus();
+            }
+          } else { 
+            if (document.activeElement === lastTabStop) {
+              e.preventDefault();
+              firstTabStop.focus();
+            }
+          }
+        }
+      });
+    }
+
+    function openModal(id) {
+      lastFocusedElement = document.activeElement;
+      if (id === 'modal-inbox') { 
+        currentInboxSlide = 0; 
+        updateInboxSlide(); 
+        const list = document.getElementById('tier-breakdown-list');
+        list.innerHTML = labelsData.map(l => `
+          <button type="button" class="legend-item p-3 rounded-lg flex flex-col active:scale-95 transition-transform" data-go-inbox-slide="${l.slideIndex}">
+            <span class="font-bold text-[11px] text-[var(--text-main)] uppercase mb-1 font-sans">${l.label}</span>
+            <span class="text-[10px] text-[var(--text-muted)] leading-relaxed font-sans">${l.detail}</span>
+          </button>
+        `).join('');
+      } 
+      else if (id === 'modal-data') { 
+        currentDataSlide = 0; 
+        updateDataSlide(); 
+      }
+      const modal = document.getElementById(id);
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      
+      setTimeout(() => trapFocus(modal), 100);
+    }
+
+    function closeModal(id) {
+      if (!id) return;
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.remove('show');
+      if (!document.getElementById('fullscreen-lightbox').classList.contains('show')) { 
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = ''; 
+      }
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+
+    function setupScrollAnimations() {
+      const backToTopBtn = document.getElementById('backToTop');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { 
+              entry.target.classList.add('visible'); 
+          } else { 
+              entry.target.classList.remove('visible'); 
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.slide-left, .slide-right, .slide-up, .service-card, .magic-highlight, .btn-bubble-container').forEach(el => observer.observe(el));
+      
+      window.addEventListener('scroll', () => { 
+        window.scrollY > 500 ? backToTopBtn.classList.add('show') : backToTopBtn.classList.remove('show'); 
+        
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+      });
+    }
+
+    function initPremiumMicroInteractions() {
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+      const dot = document.querySelector('.cursor-dot');
+      const ring = document.querySelector('.cursor-ring');
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let ringX = mouseX;
+      let ringY = mouseY;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      });
+
+      const renderRing = () => {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(renderRing);
+      };
+      requestAnimationFrame(renderRing);
+
+      const hoverTargets = document.querySelectorAll('a, button, .portfolio-item, .support-card, details summary, .legend-item, .nav-link-custom');
+      hoverTargets.forEach(target => {
+        target.addEventListener('mouseenter', () => {
+          ring.classList.add('active');
+          dot.classList.add('active');
+        });
+        target.addEventListener('mouseleave', () => {
+          ring.classList.remove('active');
+          dot.classList.remove('active');
+        });
+      });
+
+      const magneticElements = document.querySelectorAll('.btn-bubble-container, .support-card');
+      
+      magneticElements.forEach(elem => {
+        elem.classList.add('magnetic');
+        elem.addEventListener('mousemove', (e) => {
+          const rect = elem.getBoundingClientRect();
+          const x = e.clientX - rect.left; 
+          const y = e.clientY - rect.top;  
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const deltaX = (x - centerX) / 3; 
+          const deltaY = (y - centerY) / 3;
+          elem.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+
+        elem.addEventListener('mouseleave', () => {
+          elem.style.transform = `translate(0px, 0px)`;
+        });
+      });
+    }
+
+    function initStackingCards() {
+      const stackContainers = document.querySelectorAll('.stack-container');
+      const isMobile = window.innerWidth < 768;
+      
+      const stickyTopBase = isMobile ? 80 : 120; 
+      const stickyTopStep = isMobile ? 12 : 20;  
+      
+      stackContainers.forEach(container => {
+        // FIXED SELECTOR
+        const cards = Array.from(container.querySelectorAll('.stack-card'));
+        
+        cards.forEach((card, index) => {
+          card.style.setProperty('--stick-top', `${stickyTopBase + (index * stickyTopStep)}px`);
+          card.style.zIndex = 10 + index;
+        });
+
+        const triggerOffset = stickyTopBase + (cards.length * stickyTopStep) + 10;
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            const index = cards.indexOf(entry.target);
+            if (index === 0) return; 
+
+            const prevCard = cards[index - 1];
+
+            if (!entry.isIntersecting && entry.boundingClientRect.top < triggerOffset) {
+              prevCard.classList.add('stacked-under');
+            } else {
+              prevCard.classList.remove('stacked-under');
+            }
+          });
+        }, {
+          rootMargin: `-${triggerOffset}px 0px 0px 0px`,
+          threshold: 0
+        });
+
+        cards.forEach((card, index) => {
+          if (index > 0) observer.observe(card);
+        });
+      });
+    }
+
+    function checkPHTStatus() {
+        const phtString = new Date().toLocaleString("en-US", {timeZone: "Asia/Manila"});
+        const phtDate = new Date(phtString);
+        const weekday = phtDate.toLocaleString("en-US", {weekday: 'short'}); 
+        const hour = phtDate.getHours(); 
+
+        const isShiftStart = hour === 23 && ['Thu', 'Fri', 'Sat', 'Sun', 'Mon'].includes(weekday);
+        const isShiftEnd = hour >= 0 && hour < 8 && ['Fri', 'Sat', 'Sun', 'Mon', 'Tue'].includes(weekday);
+        const isWorkingMainJob = isShiftStart || isShiftEnd;
+        const isRestDayMarathon = (weekday === 'Tue' && hour >= 22) || (weekday === 'Wed') || (weekday === 'Thu' && hour < 14);
+        const isDailyWindow = hour >= 10 && hour < 14 && ['Fri', 'Sat', 'Sun', 'Mon'].includes(weekday);
+
+        const dot = document.getElementById('live-dot');
+        const text = document.getElementById('live-text');
+        const hoverText = document.getElementById('dynamic-hover-text');
+        const cardText = document.getElementById('time-cheeky-text');
+
+        if (isWorkingMainJob) {
+            if(dot) dot.className = 'w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]';
+            if(text) { text.className = 'text-red-400 text-[10px] md:text-xs font-bold tracking-widest uppercase'; text.innerText = '[On-Shift: Main Job 🚫]'; }
+            if(cardText) cardText.innerHTML = 'Currently on main shift. 🚫';
+            if(hoverText) hoverText.innerHTML = `Offline for VA 🏢`;
+        } else if (isRestDayMarathon) {
+            if(dot) dot.className = 'w-2.5 h-2.5 bg-[#22c55e] rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]';
+            if(text) { text.className = 'text-green-400 text-[10px] md:text-xs font-bold tracking-widest uppercase'; text.innerText = '[Online: Rest-Day Support 🗓️]'; }
+            if(cardText) cardText.innerHTML = 'Rest-day marathon active. 🚀';
+            if(hoverText) hoverText.innerHTML = `Available for deep work 💻`;
+        } else if (isDailyWindow) {
+            if(dot) dot.className = 'w-2.5 h-2.5 bg-yellow-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(250,204,21,0.8)]';
+            if(text) { text.className = 'text-yellow-500 text-[10px] md:text-xs font-bold tracking-widest uppercase'; text.innerText = '[Active: Mid-Day Window ☀️]'; }
+            if(cardText) cardText.innerHTML = 'Daily part-time window. ☀️';
+            if(hoverText) hoverText.innerHTML = `Part-time hours active ✨`;
+        } else {
+            if(dot) dot.className = 'w-2.5 h-2.5 bg-gray-500 rounded-full';
+            if(text) { text.className = 'text-gray-400 text-[10px] md:text-xs font-bold tracking-widest uppercase'; text.innerText = '[Offline 💤]'; }
+            if(cardText) cardText.innerHTML = 'Agent is resting/commuting. 💤';
+            if(hoverText) hoverText.innerHTML = `Catching some sleep 🛏️`;
+        }
+    }
+
+    function updatePHTClock() {
+      const clockEl = document.getElementById('pht-clock');
+      if (!clockEl) return;
+      const options = { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+      const timeString = new Date().toLocaleTimeString('en-US', options);
+      clockEl.textContent = timeString;
+    }
+
+    function initializeEvents() {
+        document.querySelectorAll('[data-scroll-target]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const targetId = e.currentTarget.getAttribute('data-scroll-target');
+                if (targetId === 'top') {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                } else {
+                    document.getElementById(targetId).scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-copy]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                copyText(e.currentTarget.getAttribute('data-copy'));
+            });
+        });
+
+        document.querySelectorAll('[data-modal-target]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                openModal(e.currentTarget.getAttribute('data-modal-target'));
+            });
+        });
+
+        document.querySelectorAll('[data-close-modal]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                closeModal(e.currentTarget.getAttribute('data-close-modal'));
+            });
+        });
+
+        document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+            backdrop.addEventListener('click', function(event) {
+                if(event.target === this) closeModal(this.id);
+            });
+        });
+
+        document.querySelectorAll('[data-skill]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                showSkill(e.currentTarget.getAttribute('data-skill'));
+            });
+        });
+
+        document.body.addEventListener('click', (e) => {
+            if (e.target.closest('[data-nav="inbox-prev"]')) prevInboxSlide();
+            if (e.target.closest('[data-nav="inbox-next"]')) nextInboxSlide();
+            if (e.target.closest('[data-go-inbox-slide]')) {
+                goToInboxSlide(e.target.closest('[data-go-inbox-slide]').getAttribute('data-go-inbox-slide'));
+            }
+
+            if (e.target.closest('[data-nav="data-prev"]')) prevDataSlide();
+            if (e.target.closest('[data-nav="data-next"]')) nextDataSlide();
+            if (e.target.closest('[data-go-data-slide]')) {
+                goToDataSlide(e.target.closest('[data-go-data-slide]').getAttribute('data-go-data-slide'));
+            }
+
+            if (e.target.closest('[data-open-lightbox="inbox"]')) openInboxLightbox();
+            if (e.target.closest('[data-open-lightbox="data"]')) openDataLightbox();
+            if (e.target.closest('[data-open-lightbox="static"]')) openStaticLightbox(e.target.closest('img').src);
+            
+            if (e.target.closest('[data-close-lightbox]')) closeLightbox(e);
+            if (e.target.closest('#fullscreen-lightbox') && e.target.id === 'fullscreen-lightbox') closeLightbox(e);
+            if (e.target.closest('[data-nav="lightbox-prev"]')) prevLightbox(e);
+            if (e.target.closest('[data-nav="lightbox-next"]')) nextLightbox(e);
+        });
+
+        document.addEventListener('keydown', function(event) {
+            const lb = document.getElementById('fullscreen-lightbox');
+            if (lb.classList.contains('show')) {
+                if (event.key === "Escape") closeLightbox();
+                else if (event.key === "ArrowLeft") prevLightbox();
+                else if (event.key === "ArrowRight") nextLightbox();
+            } else if (event.key === "Escape") {
+                document.querySelectorAll('.modal-backdrop.show').forEach(m => closeModal(m.id));
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupScrollAnimations();
+      initializeEvents();
+      initPremiumMicroInteractions();
+      initStackingCards();
+      showSkill('workspace');
+      checkPHTStatus();
+      setInterval(updatePHTClock, 1000); 
+      updatePHTClock();
+      
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        const cursorRing = document.querySelector('.cursor-ring');
+        document.addEventListener('mousedown', () => cursorRing?.classList.add('click-pulse'));
+        document.addEventListener('mouseup', () => cursorRing?.classList.remove('click-pulse'));
+      }
+    });
+  </script>
+ </body>
+</html>
